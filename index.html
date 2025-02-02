@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUSTEC Dummy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="SUSTEC-logo">
+                <a href="#">
+                <img src="client_logos/SUSTEC-Logo2.png" alt="sustec logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Technology</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="technology-SQUID.html">HTC-SQUID</a></li>
+                            <li><a href="#">Gradiometer</a></li>
+                            <li><a href="technology-SQUIDTEM.html">SQUID-TEM: SUSTEM</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Use Cases</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Oil and Gas</a></li>
+                            <li><a href="#">Geothermal</a></li>
+                            <li><a href="#">CCS</a></li>
+                            <li><a href="#">Critical Mineral</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Home01 - First Key message section -->
+        <section class="home01" style="background-color: black;">
+            <div class="home01-cont">
+                <h1>Revolutionizing Earth Science with Quantum Physics</h1>
+                <p>Empowering future environmental analysis with novel geophysical exploration technology.</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </section>
+        <!-- Home02 - Client logo section -->
+        <section class="home02-logo">
+            <div class="home02-cont">
+                <h2>TRUSTED INNOVATION PARTNERS FOR FUTURE ENERGY INDUSTRY</h2> <!-- 文章を追加 -->
+            </div>
+            <div class="home02-logo-container">
+                <div class="home02logo">
+                    <img src="client_logos/ADNOC.png" alt="Client 1 Logo">
+                </div>
+                <div class="home02logo">
+                    <img src="client_logos/4401.png" alt="Client 1 Logo">
+                </div>
+                <div class="home02logo">
+                    <img src="client_logos/INPEX.png" alt="Client 2 Logo">
+                </div>
+                <div class="home02logo">
+                    <img src="client_logos/Supreme Energy.png" alt="Client 3 Logo">
+                </div>
+                <div class="home02logo">
+                    <img src="client_logos/Sumitomo.png" alt="Client 4 Logo">
+                </div>
+                <div class="home02logo">
+                    <img src="client_logos/METI-logo.png" alt="Client 4 Logo">
+                </div>
+            </div>
+        </section>
+        <!-- Home03 - Second key message Section -->
+        <section class="Home03">
+            <div class="Home03-cont">
+                <h2>Unleashing the power of your data</h2> <!-- 文章を追加 -->
+                <p>We are in the midst of a data revolution, and the nergy industry is no exception. industrial datasets hold a wealth of information that can unlock new business opportunies and drive better decision-making.</p>
+            </div>
+            <div class="Home03-container">
+                <div class="home03img">
+                    <img src="images/oilandgas.png" alt="">
+                    <h2>Oil and Gas</h2>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more &rightarrow;</a>
+                    </div>
+                </div>
+                <div class="home03img">
+                    <img src="images/CCS.png" alt="">
+                    <h2>Carbon Capture & Storage</h2>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more &rightarrow;</a>
+                    </div>
+                </div>
+                <div class="home03img">
+                    <img src="images/Geothermal.png" alt="">
+                    <h2>Geothermal</h2>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more &rightarrow;</a>
+                    </div>
+                </div>
+                <div class="home03img">
+                    <img src="images/renewable.png" alt="">
+                    <h2>Renewable</h2>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more &rightarrow;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- JavaScriptをHTMLの末尾に追加 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add('loaded');
+        });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        const container = document.querySelector(".Home03-container",".Home03-cont p");
+        observer.observe(container);
+        });
+    </script>
+
+      <!-- Home04 - Technology -->
+        <section class="Home04">
+            <div class="Home04-cont">
+                <h2>Our solution unlocks a huge-untapped opportunities in the area of natural resources by providing cost effective but high-resolution subsurface data</h2> <!-- 文章を追加 -->
+                <p>We are in the midst of a data revolution, and the nergy industry is no exception. industrial datasets hold a wealth of information that can unlock new business opportunies and drive better decision-making.</p>
+            </div>
+            <div class="Home04-Tech">
+                <div class="Home04-Tech-img">
+                    <img src="images/Tech_SQUIDChip.png" alt="">
+                </div>
+                <div class="Home04-Tech-cont">
+                    <h2>Enabler for Deep TEM</h2>
+                    <h3>HTC-SQUID Magnetometer</h3>
+                    <p>“Patented *SQUID” technology enables development of ultimately-high 
+                        sensitive magnetometer & its novel geophysical exploration method (SQUID-TEM).</p>
+                    <div class="btn">
+                        <a href="technology-SQUID.html">Learn more about our SQUID Technology &rightarrow;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Home04-Tech">
+                <div class="Home04-Tech-img">
+                    <img src="images/SUSTEM_Pic.png" alt="">
+                </div>
+                <div class="Home04-Tech-cont">
+                    <h2>SQUID-TEM : SUSTEM</h2>
+                    <h3>Deep Transient Electromagnetic Method</h3>
+                    <p>SUSTEC’s proprietary solution unlocks a huge-untapped opportunities in 
+                        the area of natural resources by providing cost effective but high-resolution subsurface data.</p>
+                    <div class="btn">
+                        <a href="technology-SQUIDTEM.html">Learn more about our Deep TEM system &rightarrow;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Home04-Tech">
+                <div class="Home04-Tech-img">
+                    <img src="images/3DInv_Rajabasa.png" alt="">
+                </div>
+                <div class="Home04-Tech-cont">
+                    <h2>State-of-art Data Analysis</h2>
+                    <h3>Detailed 3D Geoelectrical Mapping</h3>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more about our use cases &rightarrow;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Home04-Tech">
+                <div class="Home04-Tech-img">
+                    <img src="images/Indonesia_team.png" alt="">
+                </div>
+                <div class="Home04-Tech-cont">
+                    <h2>Hostile Environment</h2>
+                    <h3>Proven Operation in Hostile Environment</h3>
+                    <p>Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text </p>
+                    <div class="btn">
+                        <a href="">Learn more about our use cases &rightarrow;</a>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+        
+                const containers = document.querySelectorAll(".Home04-Tech");
+                containers.forEach(container => {
+                    observer.observe(container);
+                });
+            });
+        </script>
+    <!-- Home05 - Sustainability Section -->
+        <section class="Home05">
+            <div class="Home05-cont">
+                <h2>SUSTEC contributes to the realization of a decarbonized society and the Sustainable Development Goals by deploying “new-way of subsurface evaluation”.</h2>
+                <p></p>
+            </div>
+            <div class="Home05-Sus-img">
+                <img src="images/Sustainability_SDGs.png" alt="">
+            </div>
+        </section>
+    </main>
+    <!-- About Section -->
+    <aside>
+        <section class="about">
+            <div class="about-logo2">
+                <a href="#">
+                <img src="images/SUSTEC logo2.png" alt="sustec logo2">
+                </a>
+            </div>
+            <div class="about-contact">
+                <h2>Contact Us</h2>
+                <p>Address: 2-11-19 Minowa-cho, Kohoku-ku, Yokohama, Kanagawa, Japan</p>
+                <p>Phone: 81-45-560-1350 (Main)</p>
+                <p>e-mail: contact1(at)sustec.jp</p>
+            </div>
+            <div class="about-linkedin">
+                <h2>Linkedin</h2>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </aside>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SUSTEC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
