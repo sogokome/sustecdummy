@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUSTEC SQUID</title>
+    <link rel="stylesheet" href="technology-SQUID.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="SUSTEC-logo">
+                <a href="index.html">
+                <img src="client_logos/SUSTEC-Logo2.png" alt="sustec logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Technology</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="technology-SQUID.html">HTC-SQUID</a></li>
+                            <li><a href="#">SQUID Gradiometer</a></li>
+                            <li><a href="technology-SQUIDTEM.html">SQUID-TEM: SUSTEM</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Use Cases</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="usecase.html#targetog">Oil and Gas</a></li>
+                            <li><a href="usecase.html#targetgeothermal">Geothermal</a></li>
+                            <li><a href="usecase.html#targetccs">CCS</a></li>
+                            <li><a href="usecase.html#targetmineral">Critical Mineral</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+     <!-- Tech - Technology section-->
+     <section class="Tech01">
+        <div class="Tech01-cont">
+            <h2>HTC-SQUID Magnetometer</h2> <!-- 文章を追加 -->
+            <p>High Temperature Superconducting Quantum Interference Device</p>
+        </div>
+        <div class="Tech01-Tech">
+            <div class="Tech01-Tech-img">
+                <img src="images_Technology/SQUID-Device2.png" alt="">
+            </div>
+            <div class="Tech01-Tech-cont">
+                <h2>7 patents for designing sensor device</h2>
+                <ul>
+                    <li>“Multilayer structure including two High Temperature 
+                        Superconducting layers fabricated by patented process, 
+                        which is so called Josephson Junction with "Ramp-edge" structure.</li>
+                    <li>This methodology is based on our unique semiconductor 
+                        fabrication process developed by a long history of extensive
+                        work in the semiconductor industry even since 80-90th.
+                        Only-one fabrication technology in the world.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Tech01-Tech">
+            <div class="Tech01-Tech-img">
+                <img src="images_Technology/SQUID_sensitivity.png" alt="">
+            </div>
+            <div class="Tech01-Tech-cont">
+                <h2>Super Sensitive SQUID Magnetometer</h2>
+                <ul>
+                    <li>Principle based on quantum physics.</li>
+                    <li>Super low signal sensitivity such us MEG (Magnetoencephalography) level
+                        up to more than geomagnetism.
+                    </li>    
+                    <li>Small size / lower power required. </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Tech01-Tech">
+            <div class="Tech01-Tech-img">
+                <img src="images_Technology/SQUID-NoiceSpectrum.png" alt="">
+            </div>
+            <div class="Tech01-Tech-cont">
+                <h2>Lower field noise at lower signal frequencies</h2>
+                <ul>
+                    <li>SQUID possesses a great nature for
+                        “Unlock deep TEM exploration”</li>
+                        
+                    <li>Less independent on sensitivity against wide 
+                        frequency band (DC up to MHz).
+                        “Great for EM data processing & analysis”</li>    
+                        
+                    <li>Liquid N2 cooling for HTS-SQUID instead of liquid He.
+                        “Low cost, available anywhere, field friendly”  </li>
+                    <li>Only a few companies in the world can use SQUID technology
+                         for geophysical exploration.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Tech01-Tech">
+            <div class="Tech01-Tech-img03">
+                <ul>
+                    <li><span style="color:rgb(3, 65, 236);"><b>x1000</b></span> better 
+                        tolerance for external noise and 
+                        <span style="color:rgb(3, 65, 236);"><b>x5</b></span> higher 
+                        slew rate against competitors.</li>
+                    <li>Higher slew rate and noise tolerance enables more deeper / 
+                        accurate geophysical exploration.
+                    </li>  
+                    </ul>
+                <img src="images_Technology/SQUID-Comparison.png" alt="">
+                <h4>*Reference: Superconductor Science and Technology, 34, 033001 (2021),
+                    “Superconducting sensors and methods in geophysical applications”,
+                    R Stolz, M Schmelz, V Zakosarenko, C. Foley, K. Tanabe, X. Xie, and R. L. Fagaly
+                    </h4>
+            </div>
+        </div>
+        <div class="Tech01-Tech">
+            <div class="Tech01-Tech-img">
+                <img src="images_Technology/Field_Fujairah_Takigami.png" alt="">
+            </div>
+            <div class="Tech01-Tech-cont">
+                <h2>Proven SQUID Operation in Hostile Environment</h2>
+                <ul>
+                    <li>Rainforest and steep mountains area of Southeast Asia.</li>
+                    <li>Rugged desert areas in the Middle East.</li>    
+                    <li>Deep snowing condition...</li>
+                    <li>Shallow water offshore environment in Japan (Hokkaido).</li>
+                </ul>
+            </div>
+        </div>
+    </section>  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+    
+            const containers = document.querySelectorAll(".Tech01-Tech");
+            containers.forEach(container => {
+                observer.observe(container);
+            });
+        });
+    </script>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SUSTEC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

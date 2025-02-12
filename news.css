@@ -1,0 +1,287 @@
+/* Basic Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Figtree', sans-serif;
+}
+/* Header */
+header {
+    background-color: #11103f;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    max-height: 80px;
+    z-index: 999;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.SUSTEC-logo{
+    padding: 0px 20px 0px 20px;
+}
+
+header .SUSTEC-logo img {
+    max-width: 200px; /* Adjust logo size */
+    max-height: 100px;
+    height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    position: relative; /* 親要素にrelativeを指定 */
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+/* Dropdown menu styles */
+nav ul li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+nav ul li a {
+    color: #333;
+    padding: 10px;
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+
+nav ul li a:hover {
+    opacity: 0.7; /* Add hover effect */
+}
+
+/* Dropdown submenu (hidden by default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1;
+}
+.dropdown-menu li {
+    margin: 0;
+}
+.dropdown-menu li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+.dropdown-menu li a:hover {
+    background-color: #00438f;
+}
+
+/*-----------------*/
+/*  news01 Section   */
+/*-----------------*/
+
+.news01 {
+    height: 400px;
+    /*background-image: url("images_usecase/usecase_title.png");*/
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.news01 h2 {
+    font-size: 64px;
+    color: black;
+    padding: 100px 300px 30px 100px;
+     text-align: start; /* Center align the logos */
+}
+
+.news01 p {
+    font-size: 24px;
+    padding: 0px 300px 20px 100px;
+    color: black;
+    text-align: start; /* Center align the logos */
+}
+
+/*--------------------------*/
+/*  News - news02 Section   */
+/*--------------------------*/
+.news02 {
+    height: auto;
+    background-color:rgb(230, 230, 230);
+    /*background-image: url("images_usecase/usecase_title.png");*/
+    background-size: cover;
+    background-position: center;
+    justify-content: space-around;
+    align-items: start;
+    display: flex;
+    padding-bottom: 50px;
+    gap: 10px;
+}
+
+.news02-header{
+    align-items: center;
+    width: 120px;
+}
+
+.news02-header h2 {
+    font-size: 32px;
+    color: black;
+    padding-top: 30px;
+    text-align: start; /* Center align the logos */
+}
+
+.news02-01{
+    width: 700px;
+}
+
+.news02-01 h2 {
+    font-size: 24px;
+    padding-top: 30px;
+    color: black;
+    text-align: start; /* Center align the logos */
+}
+
+.news02-01 p {
+    font-size: 18px;
+    padding-top: 20px;
+    color: black;
+    text-align: start; /* Center align the logos */
+}
+
+.news02-01 img{
+    max-width: auto; /* Adjust logo size */
+    height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
+    padding-top: 20px;
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+/*---------------------------------*/
+/*  Publication - news02 Section   */
+/*---------------------------------*/
+.news03 {
+    height: auto;
+    background-color:white;
+    /*background-image: url("images_usecase/usecase_title.png");*/
+    background-size: cover;
+    background-position: center;
+    justify-content: space-around;
+    align-items: start;
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.news03-header{
+    align-items: center;
+    width: 120px;
+}
+
+.news03-header h2 {
+    font-size: 32px;
+    color: black;
+    padding-top: 20px;
+    text-align: start; /* Center align the logos */
+}
+
+.news03-01{
+    width: 700px;
+}
+
+.news03-01 h2 {
+    font-size: 20px;
+    padding-top: 20px;
+    color: black;
+    text-align: start; /* Center align the logos */
+}
+
+.news03-01 p {
+    font-size: 16px;
+    padding-top: 10px;
+    color: black;
+    text-align: start; /* Center align the logos */
+}
+
+
+/*------------------------------*/
+/*---------- Footer ------------*/
+/*------------------------------*/
+/* Footer */
+footer {
+    background-color: #11103f;
+    /*background-color: rgb(223, 222, 222);*/
+    color: white;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home02-logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Home03-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Home04-Tech {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Home04-Tech-cont {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .Home04-Tech-img img {
+        max-width: 100%;
+    }
+
+    .Home05-cont h2 {
+        padding: 50px 20px;
+    }
+
+    .Home05-Sus-img img {
+        max-width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about .about-contact,
+    .about .about-linkedin {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

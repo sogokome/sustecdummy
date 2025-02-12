@@ -1,0 +1,268 @@
+/* Basic Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Figtree', sans-serif;
+}
+/* Header */
+header {
+    background-color: #11103f;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    max-height: 80px;
+    z-index: 999;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.SUSTEC-logo{
+    padding: 0px 20px 0px 20px;
+}
+
+header .SUSTEC-logo img {
+    max-width: 200px; /* Adjust logo size */
+    max-height: 100px;
+    height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    position: relative; /* 親要素にrelativeを指定 */
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+/* Dropdown menu styles */
+nav ul li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+nav ul li a {
+    color: #333;
+    padding: 10px;
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+
+nav ul li a:hover {
+    opacity: 0.7; /* Add hover effect */
+}
+
+/* Dropdown submenu (hidden by default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1;
+}
+.dropdown-menu li {
+    margin: 0;
+}
+.dropdown-menu li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+.dropdown-menu li a:hover {
+    background-color: #00438f;
+}
+
+/*-----------------*/
+/*  Main Section   */
+/*-----------------*/
+
+/*------------------------------*/
+/*  Technology - Tech Section   */
+/*------------------------------*/
+.Tech01-cont {
+    height: 300px;
+    background-image: url("images/Superconductor.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tech01-cont h2 {
+    font-size: 44px;
+    color: white;
+    padding: 100px 100px 20px 100px;
+    font-weight: bold;
+    text-align: center; /* Center align the logos */
+}
+
+.Tech01-cont p {
+    font-size: 28px;
+    color: white;
+    text-align: center; /* Center align the logos */
+}
+
+.Tech01-Tech {
+    display: flex;
+    justify-content: center; /* 水平方向に中央寄せ */
+    align-items: center; /* 垂直方向に中央寄せ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    height: 400px;
+}
+.Tech01-Tech{
+    transition: opacity 3s, transform 3s;
+    transform: translateY(0.1px);
+    opacity: 0.0;
+}
+.Tech01-Tech.visible {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: white;
+}
+
+.Tech01-Tech:nth-child(2n-1){
+    flex-direction: row-reverse;
+    background-color: #e0e0e0;
+}
+
+.Tech01-Tech-cont{
+    width: 350px;
+    height: auto;
+}
+.Tech01-Tech-cont h2 {
+    font-size: 24px;
+    color: rgb(3, 65, 236);
+    padding: 0px 0px 20px 0px; /* Add some space between the heading and logos */
+    font-weight: bold;
+}
+
+.Tech01-Tech-cont ul li {
+    font-size: 16px;
+    color: black;
+    padding: 0px 0px 20px 0px; /* Add some space between the heading and logos */
+    word-wrap: break-word;
+}
+
+.Tech01-Tech-img img{
+    max-width: 450px; /* Adjust logo size */
+    height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+    border-radius: 3%;
+}
+
+.Tech01-Tech-img03 img{
+    max-width: 650px; /* Adjust logo size */
+    height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
+}
+ .Tech01-Tech-img:hover {
+    filter: grayscale(0%);  /* ホバー時にカラーに戻す */
+    opacity: 0.7; /* Add hover effect */
+}
+.Tech01-Tech-img03 ul li {
+    font-size: 16px;
+    color: black;
+    padding-bottom: 10px; /* Add some space between the heading and logos */
+    word-wrap: break-word;
+}
+.Tech01-Tech-img03 h4{
+    max-width: 700px;
+    font-size: 12px;
+    font-weight: normal;
+    word-wrap: break-word;   
+}
+
+/*------------------------------*/
+/*---------- Footer ------------*/
+/*------------------------------*/
+/* Footer */
+footer {
+    background-color: #11103f;
+    /*background-color: rgb(223, 222, 222);*/
+    color: white;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home02-logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Home03-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Home04-Tech {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Home04-Tech-cont {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .Home04-Tech-img img {
+        max-width: 100%;
+    }
+
+    .Home05-cont h2 {
+        padding: 50px 20px;
+    }
+
+    .Home05-Sus-img img {
+        max-width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about .about-contact,
+    .about .about-linkedin {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

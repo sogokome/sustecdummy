@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="SUSTEC-logo">
+                <a href="index.html">
+                <img src="client_logos/SUSTEC-Logo2.png" alt="sustec logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Technology</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="technology-SQUID.html">HTC-SQUID</a></li>
+                            <li><a href="#">SQUID Gradiometer</a></li>
+                            <li><a href="technology-SQUIDTEM.html">SQUID-TEM: SUSTEM</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Use Cases</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="usecase.html#targetog">Oil and Gas</a></li>
+                            <li><a href="usecase.html#targetgeothermal">Geothermal</a></li>
+                            <li><a href="usecase.html#targetccs">CCS</a></li>
+                            <li><a href="usecase.html#targetmineral">Critical Mineral</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-all">   
+        <div class="contact-section">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="send_email.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your e-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Your Company*</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Your Title*</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Inquiry*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </section> 
+    </main>
+
+     <!-- About Section -->
+     <aside>
+        <section class="about">
+            <div class="about-logo2">
+                <a href="#">
+                <img src="images/SUSTEC logo2.png" alt="sustec logo2">
+                </a>
+            </div>
+            <div class="about-contact">
+                <h2>Contact Us</h2>
+                <p>Address: 2-11-19 Minowa-cho, Kohoku-ku, Yokohama, Kanagawa, Japan</p>
+                <p>Phone: 81-45-560-1350 (Main)</p>
+                <p>e-mail: contact1(at)sustec.jp</p>
+            </div>
+            <div class="about-linkedin">
+                <h2>Linkedin</h2>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="images/LinkedIn_icon.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </aside>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SUSTEC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
