@@ -9,18 +9,22 @@
 
 </head>
 <body>
-    <header>
+     <!-- Header -->
+     <header>
         <div class="container">
             <div class="SUSTEC-logo">
-                <a href="index.html">
+                <a href="#">
                 <img src="client_logos/SUSTEC-Logo2.png" alt="sustec logo">
                 </a>
             </div>
             <nav>
-                <ul>
+                <div class="menu-icon" id="menu-icon">
+                    &#9776;
+               </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">Technology</a>
+                        <a href="technology-SQUIDTEM.html">Technology</a>
                         <ul class="dropdown-menu">
                             <li><a href="technology-SQUID.html">HTC-SQUID</a></li>
                             <li><a href="#">SQUID Gradiometer</a></li>
@@ -28,7 +32,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Use Cases</a>
+                        <a href="usecase.html">Use Cases</a>
                         <ul class="dropdown-menu">
                             <li><a href="usecase.html#targetog">Oil and Gas</a></li>
                             <li><a href="usecase.html#targetgeothermal">Geothermal</a></li>
@@ -43,6 +47,8 @@
             </nav>
         </div>
     </header>
+    <script src="script.js"></script>
+    <script src="dropdown.js"></script>
     <main>
         <section class="aboutus01">
             <div class="aboutus01-cont">
@@ -120,55 +126,59 @@
         
         <!-- Overview of SUSTEC -->
         <section id="Overview">
-            <h1>Overview of SUSTEC</h1>
-            <table>
-                <tr>
-                    <th>Company</th>
-                    <th>Superconducting Sensor Technology Corporation</th>
-                </tr>
-                <tr>
-                    <td class="wide-column">Business</td>
-                    <td>
-                    <ul>
-                        <li>Deep geophysical exploration services by using SQUID-TEM</li>
-                        <p>- Pre job study including site assessment, forward simulation, etc</p>
-                        <p>- On-site data acquisition</p>
-                        <p>- Data processing and interpretation including 3D-inversion process</p>
-                        <li>Development, manufacture and sale of high-temperature superconducting 
-                            quantum interference device (HTC-SQUID) and its system.</li>
-                    </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Established</td>
-                    <td>Registration: July 1, 2020</td>
-                </tr>
-                <tr>
-                    <td>Capital</td>
-                    <td>184.08 million yen</td>
-                </tr>
-                <tr>
-                    <td>Office Location</td>
-                    <td>
+            <div class="Overview-cont">
+                <h2>Overview of SUSTEC</h2>
+            </div>
+            <div class="Overview-table">
+                <table>
+                    <tr>
+                        <th>Company</th>
+                        <th>Superconducting Sensor Technology Corporation</th>
+                    </tr>
+                    <tr>
+                        <td class="wide-column">Business</td>
+                        <td>
                         <ul>
-                            <li>2-11-19 Minowa-cho, Kohoku-ku, Yokohama, Kanagawa 223-0051 Japan</li>
-                            <li>Phone: 81-45-560-1350 (Main)</li>
-                        </ul>    
-                    </td>
-                </tr>
-                <tr>
-                    <td>Board of Director</td>
-                    <td>
-                        <ul>
-                            <li>Keiichi Tanabe (Chairman & Co-CEO)</li>
-                            <li>Tunehiro Hato (President, Co-CEO)</li>
-                            <li>Seiji Adachi (Director)</li>
-                            <li><span style="color:red;"><b>Ryosuke Shiba (External Director)</b></span></li>
-                            <li>Shusuke Taruta (Auditor)</li>
-                        </ul>  
-                    </td>
-                </tr>
-            </table>
+                            <li>Deep geophysical exploration services by using SQUID-TEM</li>
+                            <p>- Pre job study including site assessment, forward simulation, etc</p>
+                            <p>- On-site data acquisition</p>
+                            <p>- Data processing and interpretation including 3D-inversion process</p>
+                            <li>Development, manufacture and sale of high-temperature superconducting 
+                                quantum interference device (HTC-SQUID) and its system.</li>
+                        </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Established</td>
+                        <td>Registration: July 1, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Capital</td>
+                        <td>184.08 million yen</td>
+                    </tr>
+                    <tr>
+                        <td>Office Location</td>
+                        <td>
+                            <ul>
+                                <li>2-11-19 Minowa-cho, Kohoku-ku, Yokohama, Kanagawa 223-0051 Japan</li>
+                                <li>Phone: 81-45-560-1350 (Main)</li>
+                            </ul>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Board of Director</td>
+                        <td>
+                            <ul>
+                                <li>Keiichi Tanabe (Chairman & Co-CEO)</li>
+                                <li>Tunehiro Hato (President, Co-CEO)</li>
+                                <li>Seiji Adachi (Director)</li>
+                                <li><span style="color:red;"><b>Ryosuke Shiba (External Director)</b></span></li>
+                                <li>Shusuke Taruta (Auditor)</li>
+                            </ul>  
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
         <!-- Aboutus02 -->
@@ -246,17 +256,23 @@
  <!-- Our Vision -->
         <section>
             <div class="vision">
-                <h1>Our Vision</h1>
-                <h2>Making the energy industrial world safer, more efficient, more sustainable 
-                    by disruptive technology and quantum physics.</h2>
-                <p>As our industry heads into a new era of exploration, 
-                    we're on a journey to increase our understanding of the Earth.
-                    This is accelerated by our technology, and outcomes are:
-                </p>
-                <p> - To identify sweetspots more accurately at early stage</p>
-                <p> - To optimize reservoir model by multiphysics</p>
-                <p> - To accelerate the decision making process by more better subsurface understanding</p>
-                <p> - To minimize a risk in drilling decisions</p>
+                <div class="Vision-h1">
+                    <h1>Our Vision</h1>
+                </div>
+                <div class="Vision-h2">
+                    <h2>Making the energy industrial world safer, more efficient, more sustainable 
+                        by disruptive technology and quantum physics.</h2>
+                </div>
+                <div class="Vision-p">
+                    <p>As our industry heads into a new era of exploration, 
+                        we're on a journey to increase our understanding of the Earth.
+                        This is accelerated by our technology, and outcomes are:
+                    </p>
+                    <p> - To identify sweetspots more accurately at early stage</p>
+                    <p> - To optimize reservoir model by multiphysics</p>
+                    <p> - To accelerate the decision making process by more better subsurface understanding</p>
+                    <p> - To minimize a risk in drilling decisions</p>
+                </div>
             </div>
         </section>
     </main>
@@ -278,7 +294,7 @@
             <h2>Linkedin</h2>
             <div class="social-media">
                 <a href="https://www.linkedin.com" target="_blank">
-                    <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
+                    <img src="images/LinkedIn_icon.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
                 </a>
             </div>
         </div>

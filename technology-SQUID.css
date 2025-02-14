@@ -290,10 +290,13 @@ footer {
             width: auto;
             gap: 10px;
         }
-        
+        .Tech01-Tech-img {
+            text-align: center;
+            justify-content: center;
+            }
         .Tech01-Tech-img img {
-            padding: 0px 5px 0px 5px;
-        }
+            max-width: 80%;
+            }
 
         .Tech01-Tech-cont h2 {
             font-size:20px;

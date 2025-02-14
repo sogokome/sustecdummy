@@ -36,6 +36,15 @@ header .SUSTEC-logo img {
     transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
 }
 
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* 追加 */
+    right: 20px; /* 追加 */
+    top: 10%; /* 追加 */
+}
+
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -178,8 +187,20 @@ nav ul li a:hover {
     width: 100%;
     margin: 0 auto;
     text-align: left;
-    padding: 0px 50px 0px 100px
+    padding: 0px 50px 0px 100px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
 }
+.aboutus01-Hist-cont table td.wide-column {
+    width: 20%; /* 1列目の幅を30%に設定 */
+}
+
+.aboutus01-Hist-cont table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
 .aboutus01-Hist-cont td{
     padding: 10px; 
 }
@@ -217,50 +238,49 @@ nav ul li a:hover {
     overflow-x: auto; /* テーブルがはみ出さないようにスクロールを追加 */
 }
 
-h1 {
+.Overview-cont h2 {
     font-size: 32px;
     color: rgb(32, 57, 126);
     padding: 50px 0px 10px 20px; /* Add some space between the heading and logos */
     font-weight: bold;
 }
 
-table {
+.Overview-table table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    
 }
 
-th, td {
+.Overview-table table th, td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
     word-wrap: break-word; /* テキストの折り返しを有効にする */
 }
 
-th {
+.Overview-table table th {
     background-color: #f2f2f2;
 }
 
-tr:nth-child(even) {
+.Overview-table table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-td.wide-column {
+.Overview-table table td.wide-column {
     width: 20%; /* 1列目の幅を30%に設定 */
 }
 
-td ul {
+.Overview-table table td ul {
     list-style-type: disc; /* デフォルトの箇条書きスタイルを設定 */
     padding-left: 20px; /* 箇条書きのインデントを調整 */
     margin: 0; /* 上下の余白をリセット */
 }
 
-td ul li {
+.Overview-table table td ul li {
     margin-bottom: 10px; /* 各リストアイテムの間に少し余白を追加 */
 }
 
-td ul li p {
+.Overview-table table td ul li p {
     padding: 10px; /* 各リストアイテムの間に少し余白を追加 */
 }
 
@@ -270,7 +290,6 @@ td ul li p {
 
 .aboutus02 {
     background-color: #ffffff;
-    
 }
 
 .aboutus02-cont h2 {
@@ -370,25 +389,27 @@ td ul li p {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1));
 }
 
-.vision h1 {
-    font-size: 32px;
+.Vision-h1 h1 {
+    font-size: 36px;
     color: white;
     padding: 150px 100px 50px 100px; /* Add some space between the heading and logos */
     font-weight: bold;
     text-align: start; /* Center align the logos */
 }
 
-.vision h2 {
+.Vision-h2 h2 {
     font-size: 26px;
     color: white;
-    padding: 0px 400px 50px 100px; /* Add some space between the heading and logos */
+    margin: 0px 50px 50px 100px; /* Add some space between the heading and logos */
     font-weight: bold;
+    text-wrap: none;
+    width:auto;
 }
 
-.vision p {
-    font-size: 14;
+.Vision-p p {
+    font-size: 16px;
     color: white;
-    padding: 0px 400px 30px 100px;
+    padding: 0px 50px 30px 100px;
 }
 
 /*-----------------*/
@@ -398,7 +419,7 @@ td ul li p {
 .about {
     height: 300px;
     width: 100%;
-    background-image: url("images/SUSTEC_backgroundimg3.PNG");
+    background-image: url("images/SUSTEC_backgroundimg3.png");
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -409,27 +430,27 @@ td ul li p {
     
 }
 
-.about .about-logo2 img {
+.about-logo2 img {
     max-width: 400px;
 }
 
-.about .about-contact {
+.about-contact {
     max-width: 400px;
 }
 
-.about .about-contact h2 {
+.about-contact h2 {
     font-size: 32px;
     padding: 10px 0px 10px 0px;
     text-decoration: underline;
 }
 
-.about .about-contact p {
+.about-contact p {
     font-size: 18px;
     color: black;
     padding: 10px 0px 10px 0px;
     /*line-height: 1.6;*/
 }
-.about .about-linkedin h2 {
+.about-linkedin h2 {
     font-size: 32px;
     padding: 10px 100px 10px 0px;
     text-decoration: underline;
@@ -456,58 +477,138 @@ footer {
     text-align: center;
 }
 
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* Media Queries for Responsive Design */
+/*------------------------------------ */
+/* ----------------------------------- */
 
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    
+    /* Header modification*/
+        header {
+            background-color: #11103f;
+            color: #fff;
+            padding: 10px 0 10px 0;
+        }
+        .menu-icon {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+          }
+        .dropdown:hover .dropdown-menu {
+            display: none;
+          }
+    
+        .nav {
+            background-color: #11103f;
+            height: auto;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: auto;
+            background-color: #11103f;
+            position: absolute;
+            top: 45px;
+            right: 10px;
+            height: 0; /* 追加 */
+            overflow: hidden; /* 追加 */
+            transition: height 0.3s ease; /* 追加 */
+        }
+    
+        .nav-links li {
+            text-align: center;
+            margin: 10px 0;
+        }
+    
+        .nav-links a {
+            padding: 10px;
+        }
+    
+        .nav-links.active {
+            display: flex;
+            height: auto; /* 追加：全画面の高さに設定 */
+        }
+    /* Main part modification*/
+    
+        .aboutus01-cont h2 {
+            font-size: 28px;
+            padding: 0px 0px 0px 0px;
+        }    
+        .aboutus01-Hist-cont {
+            padding: 0px 20px 0px 20px;
+        }          
+        .aboutus01-Hist-cont h2 {
+            font-size: 28px;
+            padding: 0px 0px 10px 0px;
+        }       
+        .aboutus01-Hist-cont tr{
+            font-size: 14px;
+        }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+        .Overview-cont h2{
+            font-size: 28px;
+            padding: 0px 0px 0px 20px;
+        }    
+        .Overview-table {
+            padding: 0px 20px 0px 20px;
+        }
+        .Overview-table tr{
+           font-size: 15px;
+        }                 
+        .aboutus02-cont h2{
+            font-size: 28px;
+            text-align: center;
+            padding: 0px 0px 20px 0px;
+        }
+        .aboutus02-cont p{
+            font-size: 16;
+            padding: 0px 5px 0px 5px;
+        }
+        .aboutus02-container {
+            flex-direction: column;
+            justify-content: center; /* 垂直方向に中央揃え */
+            align-items: center; /* 水平方向に中央揃え */
+        }
+        .Vision-h1 h1{
+            margin: 0;
+            font-size: 28px;
+            padding: 100px 100px 30px 50px; 
+        }
+        .Vision-h2 h2{
+            font-size: 20px;
+            margin: 0px 50px 30px 50px;
+        }
+        .Vision-p p{
+            padding: 0px 50px 30px 50px;
+        }
+    
+        .about {
+            flex-direction: column;
+            align-items:start;
+            gap: 0px;
+        }
+        .about-logo2 img{
+            width: 200px;
+        }
+        .about-contact h2{
+            font-size: 18px;
+            padding: 0px 10px 10px 20px;
+        }
+        .about-contact p{
+            padding: 0px 10px 0 20px;
+            font-size: 14px;
+        
+        }
+        .about-linkedin h2{
+            font-size: 18px;
+            padding: 10px 10px 0 20px;
+        }
+        
+        .social-media img{
+             margin: 0px 10px 10px 20px;
+        }
+    
     }
-
-    .home02-logo-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .Home03-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .Home04-Tech {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .Home04-Tech-cont {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .Home04-Tech-img img {
-        max-width: 100%;
-    }
-
-    .Home05-cont h2 {
-        padding: 50px 20px;
-    }
-
-    .Home05-Sus-img img {
-        max-width: 100%;
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .about .about-contact,
-    .about .about-linkedin {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-}

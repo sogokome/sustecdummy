@@ -369,8 +369,12 @@ footer {
             width: auto;
             gap: 10px;
         }
-        
+        .TEM01-Tech-img {
+            text-align: center;
+            justify-content: center;
+            }
         .TEM01-Tech-img img{
+            max-width: 80%;
             margin: 0px 5px 0px 5px;   
         }
         .TEM01-Tech-cont h2 {
