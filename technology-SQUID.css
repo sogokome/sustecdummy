@@ -278,18 +278,23 @@ footer {
     /* Main part modification*/
         .Tech01-cont h2{
             font-size: 28px;
-            padding: 100px 0px 20px 0px;
+            padding: 100px 5px 20px 5px;
         }
         .Tech01-cont p{
             font-size: 20px;
-            padding: 0px 0px 0px 0px;
+            padding: 0px 5px 0px 5px;
         }
         .Tech01-Tech {
-            padding: 50px 0 50px 0;
+            padding: 50px 5px 50px 5px;
             height: auto;
             width: auto;
             gap: 10px;
         }
+        
+        .Tech01-Tech-img img {
+            padding: 0px 5px 0px 5px;
+        }
+
         .Tech01-Tech-cont h2 {
             font-size:20px;
             padding: 10px 0 20px 0;
@@ -302,6 +307,16 @@ footer {
         .Tech01-Tech:nth-last-child(2){ /*To select 3rd item: CCS*/
             height: auto;
             width: auto;
+        }
+        .Tech01-Tech:nth-last-child(2) ul li{ /*To select 3rd item: CCS*/
+            margin: 0px 30px 0px 40px;
+        }
+        .Tech01-Tech:nth-last-child(2) h4{ /*To select 3rd item: CCS*/
+            margin: 0px 30px 0px 40px;
+        }
+        
+        .Tech01-Tech-img03 img {
+            padding: 0px 20px 0px 20px;
         }
 
         .Tech01-Tech:nth-last-child(2) img{ /*To select 3rd item: CCS*/
