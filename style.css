@@ -502,12 +502,13 @@ footer {
         height: auto; /* 追加：全画面の高さに設定 */
     }
 /* Main part modification*/
-
     .home01-cont h1{
         font-size: 28px;
+        width: auto;
     }
     .home01-cont p{
         font-size: 18px;
+        width: auto;
     }
     nav ul {
         flex-direction: column;
@@ -516,6 +517,7 @@ footer {
 
     .home02-logo-container {
         flex-direction: column;
+        width: auto;
         gap: 30px;
     }
 
@@ -532,6 +534,10 @@ footer {
         align-items: center; /* 水平方向に中央揃え */
         gap: 50px;
     }
+    .Home03-container img{
+        width: 500px;
+    }
+
     .Home04-cont {
         width: 100%;
         height: 80%;
@@ -576,30 +582,32 @@ footer {
         max-width: 100%;
         justify-content: center; /* 垂直方向に中央揃え */
         align-items: center; /* 水平方向に中央揃え */
-
     }
 
     .about {
-        gap: 30px;
+        flex-direction: column;
+        align-items:start;
+        gap: 0px;
     }
     .about-logo2 img{
         width: 200px;
     }
     .about-contact h2{
         font-size: 18px;
+        padding: 0px 10px 10px 20px;
     }
     .about-contact p{
+        padding: 0px 10px 0 20px;
         font-size: 14px;
+    
     }
     .about-linkedin h2{
         font-size: 18px;
+        padding: 10px 10px 0 20px;
     }
-
-    .about-contact,
-    .about-linkedin {
-        width: 100%;
-        padding: 20px 0;
-       
+    
+    .social-media img{
+         margin: 0px 10px 0 20px;
     }
 
 }
