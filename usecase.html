@@ -12,15 +12,18 @@
     <header>
         <div class="container">
             <div class="SUSTEC-logo">
-                <a href="index.html">
+                <a href="#">
                 <img src="client_logos/SUSTEC-Logo2.png" alt="sustec logo">
                 </a>
             </div>
             <nav>
-                <ul>
+                <div class="menu-icon" id="menu-icon">
+                    &#9776;
+               </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">Technology</a>
+                        <a href="technology-SQUIDTEM.html">Technology</a>
                         <ul class="dropdown-menu">
                             <li><a href="technology-SQUID.html">HTC-SQUID</a></li>
                             <li><a href="#">SQUID Gradiometer</a></li>
@@ -28,7 +31,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Use Cases</a>
+                        <a href="usecase.html">Use Cases</a>
                         <ul class="dropdown-menu">
                             <li><a href="usecase.html#targetog">Oil and Gas</a></li>
                             <li><a href="usecase.html#targetgeothermal">Geothermal</a></li>
@@ -43,6 +46,8 @@
             </nav>
         </div>
     </header>
+    <script src="script.js"></script>
+    <script src="dropdown.js"></script>
 <main>
      <!-- Tech - SQUID-TEM section-->
      <section class="usecase">
