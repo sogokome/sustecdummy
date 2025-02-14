@@ -38,6 +38,15 @@ header .SUSTEC-logo img {
     transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
 }
 
+ .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* 追加 */
+    right: 20px; /* 追加 */
+    top: 10%; /* 追加 */
+}
+
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -123,13 +132,13 @@ body.loaded .home01{
     background-color: black;
 }
 
-main .home01-cont h1 {
+.home01-cont h1 {
     font-size: 44px;
     margin-bottom: 10px;
     padding: 0 100px 0 100px;
 }
 
-main .home01-cont p {
+ .home01-cont p {
     font-size: 26px;
     margin-bottom: 20px;
     padding: 0 100px 0 100px;
@@ -183,7 +192,7 @@ main .home01-cont p {
 }
 
 .Home03-cont h2 {
-    font-size: 26px;
+    font-size: 28px;
     color: #333;
     padding: 100px 0 50px 0; /* Add some space between the heading and logos */
     font-weight: bold;
@@ -191,7 +200,7 @@ main .home01-cont p {
 }
 
 .Home03-cont p {
-    font-size: 14;
+    font-size: 16px;
     color: #333;
     padding: 0px 100px 0px 100px;
     margin-bottom: 50px; /* Add some space between the heading and logos */
@@ -289,7 +298,7 @@ main .home01-cont p {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: white;
-    height: 500px;
+    height: 560px;
 }
 .Home04-Tech{
     transition: opacity 3s, transform 3s;
@@ -310,6 +319,7 @@ main .home01-cont p {
 .Home04-Tech-cont{
     width: 500px;
     height: auto;
+
 }
 .Home04-Tech-cont h2 {
     font-size: 14px;
@@ -331,7 +341,7 @@ main .home01-cont p {
 }
 
 .Home04-Tech-img img{
-    max-width: 450px; /* Adjust logo size */
+    max-width: 350px; /* Adjust logo size */
     height: auto;      /* アスペクト比を保ったまま高さを自動調整 */
     transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
     border-radius: 3%;
@@ -378,7 +388,7 @@ main .home01-cont p {
 .about {
     height: 300px;
     width: 100%;
-    background-image: url("images/SUSTEC_backgroundimg3.png");
+    background-image: url("images/SUSTEC_backgroundimg3.PNG");
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -389,27 +399,27 @@ main .home01-cont p {
     
 }
 
-.about .about-logo2 img {
+.about-logo2 img {
     max-width: 400px;
 }
 
-.about .about-contact {
+.about-contact {
     max-width: 400px;
 }
 
-.about .about-contact h2 {
+.about-contact h2 {
     font-size: 32px;
     padding: 10px 0px 10px 0px;
     text-decoration: underline;
 }
 
-.about .about-contact p {
+.about-contact p {
     font-size: 18px;
     color: black;
     padding: 10px 0px 10px 0px;
     /*line-height: 1.6;*/
 }
-.about .about-linkedin h2 {
+.about-linkedin h2 {
     font-size: 32px;
     padding: 10px 100px 10px 0px;
     text-decoration: underline;
@@ -428,7 +438,6 @@ main .home01-cont p {
 }
 
 /* Footer */
-/* Footer */
 footer {
     background-color: #11103f;
     /*background-color: rgb(223, 222, 222);*/
@@ -443,12 +452,63 @@ footer {
 /*------------------------------------ */
 /* ----------------------------------- */
 
+
 @media (max-width: 768px) {
-    header .container {
+    
+/* Header modification*/
+    header {
+        background-color: #11103f;
+        color: #fff;
+        padding: 10px 0 10px 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .dropdown-menu {
+        display: none;
+      }
+    .dropdown:hover .dropdown-menu {
+        display: none;
+      }
+
+    .nav {
+        background-color: #11103f;
+        height: auto;
+    }
+    .nav-links {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        width: auto;
+        background-color: #11103f;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        height: 0; /* 追加 */
+        overflow: hidden; /* 追加 */
+        transition: height 0.3s ease; /* 追加 */
     }
 
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        height: auto; /* 追加：全画面の高さに設定 */
+    }
+/* Main part modification*/
+
+    .home01-cont h1{
+        font-size: 28px;
+    }
+    .home01-cont p{
+        font-size: 18px;
+    }
     nav ul {
         flex-direction: column;
         gap: 10px;
@@ -456,45 +516,100 @@ footer {
 
     .home02-logo-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
+    }
+
+    .Home03-cont h2{
+        font-size: 22px;
+    }
+    .Home03-cont p{
+        font-size: 14px;
     }
 
     .Home03-container {
         flex-direction: column;
-        gap: 20px;
+        justify-content: center; /* 垂直方向に中央揃え */
+        align-items: center; /* 水平方向に中央揃え */
+        gap: 50px;
+    }
+    .Home04-cont {
+        width: 100%;
+        height: 80%;
+    }
+    .Home04-cont h2{
+        font-size: 22px;
+    }
+    .Home04-cont p{
+        font-size: 16px;
     }
 
     .Home04-Tech {
         flex-direction: column;
+        justify-content: center; /* 垂直方向に中央揃え */
+        align-items: center; /* 水平方向に中央揃え */
         height: auto;
+        padding: 50px 0px 50px 0px;
+        text-align: center;
     }
 
     .Home04-Tech-cont {
         width: 100%;
         padding: 0 20px;
+
     }
 
     .Home04-Tech-img img {
-        max-width: 100%;
+        max-width: 70%;
+        justify-content: center; /* 垂直方向に中央揃え */
+        align-items: center; /* 水平方向に中央揃え */
     }
 
     .Home05-cont h2 {
-        padding: 50px 20px;
+        font-size: 20px;
+        padding: 150px 50px 150px 50px;
+        justify-content: center; /* 垂直方向に中央揃え */
+        align-items: center; /* 水平方向に中央揃え */
     }
 
     .Home05-Sus-img img {
+        padding: 0 50px 0 50px;
         max-width: 100%;
+        justify-content: center; /* 垂直方向に中央揃え */
+        align-items: center; /* 水平方向に中央揃え */
+
     }
 
     .about {
-        flex-direction: column;
-        gap: 10px;
+        gap: 30px;
+    }
+    .about-logo2 img{
+        width: 200px;
+    }
+    .about-contact h2{
+        font-size: 18px;
+    }
+    .about-contact p{
+        font-size: 14px;
+    }
+    .about-linkedin h2{
+        font-size: 18px;
     }
 
-    .about .about-contact,
-    .about .about-linkedin {
-        max-width: 100%;
-        padding: 0 20px;
+    .about-contact,
+    .about-linkedin {
+        width: 100%;
+        padding: 20px 0;
+       
+    }
+
+}
+
+/* 
+  @media only screen and (min-device-width: 375px) and 
+  (max-device-width: 812px) and (orientation: portrait) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
