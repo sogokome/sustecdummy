@@ -41,6 +41,16 @@ header .SUSTEC-logo img {
     transition: opacity 0.3s ease, filter 0.3s ease; /* 滑らかなホバーとフィルターの効果 */
 }
 
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* 追加 */
+    right: 20px; /* 追加 */
+    top: 10%; /* 追加 */
+}
+
+
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -174,7 +184,7 @@ nav ul li a:hover {
 .about {
     height: 300px;
     width: 100%;
-    background-image: url("images/SUSTEC_backgroundimg3.PNG");
+    background-image: url("images/SUSTEC_backgroundimg3.png");
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -185,27 +195,27 @@ nav ul li a:hover {
     
 }
 
-.about .about-logo2 img {
+.about-logo2 img {
     max-width: 400px;
 }
 
-.about .about-contact {
+.about-contact {
     max-width: 400px;
 }
 
-.about .about-contact h2 {
+.about-contact h2 {
     font-size: 32px;
     padding: 10px 0px 10px 0px;
     text-decoration: underline;
 }
 
-.about .about-contact p {
+.about-contact p {
     font-size: 18px;
     color: black;
     padding: 10px 0px 10px 0px;
     /*line-height: 1.6;*/
 }
-.about .about-linkedin h2 {
+.about-linkedin h2 {
     font-size: 32px;
     padding: 10px 100px 10px 0px;
     text-decoration: underline;
@@ -224,7 +234,6 @@ nav ul li a:hover {
 }
 
 /* Footer */
-/* Footer */
 footer {
     background-color: #11103f;
     /*background-color: rgb(223, 222, 222);*/
@@ -232,7 +241,6 @@ footer {
     padding: 20px 0 20px 0;
     text-align: center;
 }
-
 /* ----------------------------------- */
 /* ----------------------------------- */
 /* Media Queries for Responsive Design */
@@ -240,56 +248,93 @@ footer {
 /* ----------------------------------- */
 
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    
+    /* Header modification*/
+        header {
+            background-color: #11103f;
+            color: #fff;
+            padding: 10px 0 10px 0;
+        }
+        .menu-icon {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+          }
+        .dropdown:hover .dropdown-menu {
+            display: none;
+          }
+    
+        .nav {
+            background-color: #11103f;
+            height: auto;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: auto;
+            background-color: #11103f;
+            position: absolute;
+            top: 45px;
+            right: 10px;
+            height: 0; /* 追加 */
+            overflow: hidden; /* 追加 */
+            transition: height 0.3s ease; /* 追加 */
+        }
+    
+        .nav-links li {
+            text-align: center;
+            margin: 10px 0;
+        }
+    
+        .nav-links a {
+            padding: 10px;
+        }
+    
+        .nav-links.active {
+            display: flex;
+            height: auto; /* 追加：全画面の高さに設定 */
+        }
+    /* Main part modification*/
+    
+        .contact-form h2 {
+            font-size: 24px;
+        }    
+        .contact-form label {
+            font-size: 16px;
+        }    
+        .contact-all {
+            width: 100%;
+            height: auto;
+            padding: 120px 10px 100px 10px;
+        }    
+    
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+          .about {
+            flex-direction: column;
+            align-items:start;
+            gap: 0px;
+        }
+        .about-logo2 img{
+            width: 200px;
+        }
+        .about-contact h2{
+            font-size: 18px;
+            padding: 0px 10px 10px 20px;
+        }
+        .about-contact p{
+            padding: 0px 10px 0 20px;
+            font-size: 14px;
+        
+        }
+        .about-linkedin h2{
+            font-size: 18px;
+            padding: 10px 10px 0 20px;
+        }
+        
+        .social-media img{
+             margin: 0px 10px 10px 20px;
+        }
+    
+    
     }
-
-    .home02-logo-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .Home03-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .Home04-Tech {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .Home04-Tech-cont {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .Home04-Tech-img img {
-        max-width: 100%;
-    }
-
-    .Home05-cont h2 {
-        padding: 50px 20px;
-    }
-
-    .Home05-Sus-img img {
-        max-width: 100%;
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .about .about-contact,
-    .about .about-linkedin {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-}

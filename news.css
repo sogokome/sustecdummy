@@ -312,15 +312,16 @@ footer {
         }
     /* Main part modification*/
         .news01 {
+            width: 100%;
             height: auto;
         }
         .news01 h2 {
             font-size: 28px;
-            padding: 70px 150px 30px 50px;
+            padding: 70px 0px 30px 50px;
         }
         .news01 p {
             font-size: 18px;
-            padding: 0px 150px 70px 50px;
+            padding: 0px 0px 70px 50px;
         }
         .news02 {
             flex-direction: column;
