@@ -119,13 +119,13 @@ nav ul li a:hover {
 .news01 h2 {
     font-size: 64px;
     color: black;
-    padding: 100px 150px 30px 100px;
+    padding: 70px 150px 30px 100px;
      text-align: start; /* Center align the logos */
 }
 
 .news01 p {
     font-size: 24px;
-    padding: 0px 300px 20px 100px;
+    padding: 0px 200px 20px 100px;
     color: black;
     text-align: start; /* Center align the logos */
 }
@@ -200,13 +200,13 @@ nav ul li a:hover {
 
 .news03-header{
     align-items: center;
-    width: 120px;
+    width: auto;
 }
 
 .news03-header h2 {
     font-size: 32px;
     color: black;
-    padding-top: 20px;
+    padding-top: 30px;
     text-align: start; /* Center align the logos */
 }
 
@@ -214,20 +214,34 @@ nav ul li a:hover {
     width: 700px;
 }
 
-.news03-01 h2 {
+.news03-01 table {
+    counter-reset: rowNumber;
+    padding: 20px 0 0px 0;
+    width: 100%;
+  }
+  
+.news03-01 tbody tr td{
+    counter-increment: rowNumber;
+    padding: 10px 0 40px 0;
+    font-size: 22px;
+  }
+.news03-01 tbody tr p{
+    counter-increment: rowNumber;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+  }
+  
+.news03-01 tbody tr td:first-child::before {
+    content: "[" counter(rowNumber) "]";
+    font-weight: bold;
+  }
+
+.news04 .btn{
     font-size: 20px;
-    padding-top: 20px;
-    color: black;
-    text-align: start; /* Center align the logos */
-}
+    text-align: center;
+    padding: 0 0 30px 0;
 
-.news03-01 p {
-    font-size: 16px;
-    padding-top: 10px;
-    color: black;
-    text-align: start; /* Center align the logos */
-}
-
+  }
 
 /*------------------------------*/
 /*---------- Footer ------------*/
@@ -320,19 +334,24 @@ footer {
             padding: 20px 0 20px 20px;
             max-width: auto;
         }
+        .news02-01 {
+            width: 100%;
+            height: auto;
+        }
         .news02-01 h2{
             font-size: 18px;
             padding: 0 0 20px 20px;
-            width: 75%;
+            width: 100%;
         }
         .news02-01 p{
             font-size: 18px;
             padding: 0 0 20px 20px;
-            width: 75%;
+            width: 100%;
         }
         .news02-01 img{
             padding: 0 0 20px 20px;
-            max-width: 75%;
+            width: 100%;
+            height: auto;
         }
         .news03 {
             flex-direction: column;
@@ -340,7 +359,22 @@ footer {
             width: 100%;
             padding: 0;
         }
-
+        .news03-01 {
+            width: 100%;
+        }
+        .news03-header h2{
+            font-size: 26px;
+            padding: 20px 0 0 20px;
+        }
+        .news03-01 table tbody tr td{
+            font-size: 18px;
+            padding: 0 0 20px 20px;
+        }
+        .news04 .btn a{
+            font-size: 18px;
+        }
+        
+  
    /* About responsible*/
         .about {
             flex-direction: column;
