@@ -108,13 +108,14 @@ nav ul li a:hover {
 /*-----------------*/
 
 .news01 {
-    height: 400px;
+    height: 500px;
     /*background-image: url("images_usecase/usecase_title.png");*/
     background-size: cover;
     background-position: center;
     justify-content: center;
     align-items: center;
 }
+
 
 .news01 h2 {
     font-size: 64px;
@@ -128,6 +129,15 @@ nav ul li a:hover {
     padding: 0px 200px 20px 100px;
     color: black;
     text-align: start; /* Center align the logos */
+}
+.news01 .btn{
+    padding: 0px 100px 0 100px;
+    display: flex;
+    justify-content: center;
+}
+.news01 .btn a{
+    font-size: 24px;
+    padding: 30px 20px 0 20px;
 }
 
 /*--------------------------*/
@@ -148,7 +158,7 @@ nav ul li a:hover {
 
 .news02-header{
     align-items: center;
-    width: 120px;
+    width: 170px;
 }
 
 .news02-header h2 {
@@ -243,6 +253,88 @@ nav ul li a:hover {
 
   }
 
+/*---------------------------------*/
+/*  Recruiting - news02 Section   */
+/*---------------------------------*/
+.news05 {
+    height: auto;
+    background-color:rgb(230, 230, 230);
+    background-image: url("images_news/recruiting.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: space-around;
+    align-items: start;
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.news05-header{
+    align-items: center;
+    width: auto;
+}
+
+.news05-header h2 {
+    color: white;
+    font-size: 32px;
+    padding-top: 30px;
+    text-align: start; /* Center align the logos */
+}
+
+.news05-01{
+    width: 700px;
+}
+
+.news05-01 h3{
+    color: white;
+    padding: 30px 10px 0 0 ;
+    font-size: 24px;
+}
+.news05-01 p{
+    color: white;
+    padding: 10px 10px 0 0 ;
+    font-size: 16px;
+}
+
+.news05-01 table {
+    counter-reset: rowNumber;
+    padding: 20px 0 0px 0;
+    width: 100%;
+  }
+  
+.news05-01 tbody tr td{
+    color: white;
+    counter-increment: rowNumber;
+    padding: 10px 0 40px 0;
+    font-size: 22px;
+  }
+.news05-01 tbody tr p{
+    color: white;
+    counter-increment: rowNumber;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+  }
+  
+.news05-01 tbody tr td:first-child::before {
+    content: "[" counter(rowNumber) "]";
+    font-weight: bold;
+  }
+
+.news05-01 .btn{
+    color: white;
+    font-size: 28px;
+    text-align: start;
+    padding: 0 0 30px 0;
+
+  }
+  .news05-01 .contact-link {
+    color: white; /* ここで希望の色を指定します。例として赤色に設定 */
+  }
+  
+  .news05-01 .contact-link:hover {
+    color: aquamarine; /* ホバー時の色を指定します。例として緑色に設定 */
+  }
+
 /*------------------------------*/
 /*---------- Footer ------------*/
 /*------------------------------*/
@@ -313,7 +405,7 @@ footer {
     /* Main part modification*/
         .news01 {
             width: 100%;
-            height: auto;
+            height: 400px;
         }
         .news01 h2 {
             font-size: 28px;
@@ -322,6 +414,15 @@ footer {
         .news01 p {
             font-size: 18px;
             padding: 0px 0px 70px 50px;
+        }
+        .news01 .btn {
+            font-size: 18px;
+            padding: 0px 0px 70px 50px;
+        }
+        
+        .news01 .btn a {
+            font-size: 18px;
+            padding: 0px 20px 0px 0px;
         }
         .news02 {
             flex-direction: column;
@@ -373,6 +474,37 @@ footer {
         }
         .news04 .btn a{
             font-size: 18px;
+        }
+        
+        .news05 {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            padding: 0 0 100px 0;
+        }
+        .news05-01 {
+            width: 100%;
+        }
+        .news05-header h2{
+            font-size: 26px;
+            padding: 20px 0 0 20px;
+        }
+        
+        .news05-01 h3{
+            font-size: 26px;
+            padding: 20px 10px 0 20px;
+        }
+        .news05-01 p{
+            font-size: 18px;
+            padding: 20px 10px 0 20px;
+        }
+        .news05-01 table tbody tr td{
+            font-size: 18px;
+            padding: 0 0 20px 20px;
+        }
+        .news05-01 .btn a{
+            font-size: 18px;
+            padding: 0px 0px 0 20px;
         }
         
   
